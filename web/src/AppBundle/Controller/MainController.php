@@ -17,6 +17,30 @@ class MainController extends Controller{
     );
     return new Response($html, 200, array('Content-Type' => 'text/html'));
 	}
+	
+	
+	public function invAction(){
+		$em = $this->get('doctrine')->getManager();
+		$req = $this->getRequest();
+		
+		$ticket = $em->getRepository('AppBundle:Tickets')
+		->findByUnq($req->get('unq'));
+		
+		if(!$ticket){
+			return new JsonResponse(array('error'=>1,'desc'=>'ticket not vaild'));
+		}else{
+			
+			$ticket[0]->setUserid($this->getUser()->getUsername());
+			$em->flush();
+		}
+		$html = $this->renderView(
+				'AppBundle:Main:index.html.twig', [
+						'dataInv' => $ticket[0],
+						'step'	=> 0,
+				]
+				);
+		return new Response($html, 200, array('Content-Type' => 'text/html'));
+	}
 
 
 }

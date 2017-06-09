@@ -132,6 +132,11 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             return array (  '_controller' => 'AppBundle\\Controller\\ApiController::createInvAction',  '_route' => 'api_createInv',);
         }
 
+        // api_inv
+        if ($pathinfo === '/inv') {
+            return array (  '_controller' => 'AppBundle\\Controller\\MainController::invAction',  '_route' => 'api_inv',);
+        }
+
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();
     }
 }
