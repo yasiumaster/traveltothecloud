@@ -3,14 +3,20 @@ namespace AppBundle\Controller;
 
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\BrowserKit\Response;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
 class MainController extends Controller{
-	
+
 	public function indexAction(){
-		return new JsonResponse(array('ok'=>true));
+
+
+
+		$html = $this->renderView(
+      'AppBundle:Main:index.html.twig', []
+    );
+    return new Response($html, 200, array('Content-Type' => 'text/html'));
 	}
-	
-	
+
+
 }
