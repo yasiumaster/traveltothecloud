@@ -558,3 +558,5 @@ fee166,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/save_de
 12079c,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/,1497048784,,200
 64db8d,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/save_device_token?deviceToken=ejSkapAL32w%3AAPA91bG67QKFlmx8Qynaamvg30GJA6KYVco-TBr6NocTa86F6YbuKFPgVcul-CM964uicd2HrqbqRIpDE0L5e5i-ZYbC1huuVyVSo0d8PxiV8RzRFUQC4J0PJPeFTDm4EajKolWH3jK_,1497048786,,200
 >>>>>>> d22cf50fe5c8341a50ead61a637d93869b58d1f3
+a8d179,127.0.0.1,GET,http://127.0.0.1/traveltothecloud/web/web/inv?unq=d39da348076b9df4d3dc5ad15d02aac3,1497050668,cb11b4,200
+cb11b4,127.0.0.1,GET,http://127.0.0.1/traveltothecloud/web/web/inv?unq=d39da348076b9df4d3dc5ad15d02aac3,1497050668,,500
