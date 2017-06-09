@@ -1846,7 +1846,7 @@
         </argument>
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>593a9b649b15e5.75166225</argument>
+            <argument>593aa492866b82.42012817</argument>
           </service>
         </argument>
       </argument>
@@ -2203,7 +2203,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.token_storage"/>
-            <argument>593a9b649b15e5.75166225</argument>
+            <argument>593aa492866b82.42012817</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
             <argument type="service" id="security.authentication.manager"/>
           </service>
