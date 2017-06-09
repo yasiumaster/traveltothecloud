@@ -80,7 +80,7 @@ class Tickets
     /**
      * @var int
      *
-     * @ORM\Column(name="vdate", type="datetime")
+     * @ORM\Column(name="vdate", type="datetimetz")
      */
     private $vdate;
     
@@ -289,7 +289,7 @@ class Tickets
     /**
      * Get vdate
      *
-     * @return integer
+     * @return \DateTime
      */
     public function getVdate()
     {
@@ -299,7 +299,7 @@ class Tickets
     
     /**
      * Set vdate
-     *
+     * 
      * @return Tikets
      */
     public function setVdate($vdate)

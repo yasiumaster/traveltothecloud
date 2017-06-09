@@ -22,7 +22,8 @@ class ApiController extends Controller{
 		$lat 	  = $req->get('lat');
 		$long	  = $req->get('long');
 		$ff		  = $req->get('ff');
-		$date     = $req->get('date');
+		
+		$date     = \DateTime::createFromFormat('Y-m-d H:i:s', $req->get('date'));
 		
 		if( 	($ticketno == null) ||
 				($adress== null) ||
@@ -33,9 +34,10 @@ class ApiController extends Controller{
 			return new JsonResponse(ResponseHelper::ApiErrorFields());
 		
 		}
-		$unq = md5(random_int(10000000, 99999999));
+		$unq = md5(uniqid());
 		
 		$ticket = new Tickets();
+		$ticket->setUnq($unq);
 		$ticket->setAddress($adress);
 		$ticket->setTicketno($ticketno);
 		$ticket->setName($name);
@@ -43,9 +45,10 @@ class ApiController extends Controller{
 		$ticket->setLong($long);
 		$ticket->setFriend($ff);
 		$ticket->setVdate($date);
+		$ticket->setUserid(-1);
 		$em->persist($ticket);
 		$em->flush();
-		return new JsonResponse(ApiCreateInv($unq));
+		return new JsonResponse(ResponseHelper::ApiCreateInv($unq));
 	}
 	
 	
