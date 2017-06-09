@@ -10,3 +10,11 @@ auth_login:
 app_login_check:
     path:  /login_check
     defaults: { _controller: "AppBundle:Auth:loginCheck" }
+    
+api_createInv:
+    path:  /api/createInv
+    defaults: { _controller: "AppBundle:Api:createInv" }
+    
+api_inv:
+    path:  /inv
+    defaults: { _controller: "AppBundle:Main:inv" }

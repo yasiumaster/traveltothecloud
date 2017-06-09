@@ -1,4 +1,6 @@
 var convert = function(base64Input) {
+  console.log(base64Input);
+  return;
 	$.ajax('https://asyf0ysjqd.execute-api.us-east-1.amazonaws.com/tttc/calllex', {
 		type: "POST",
 		data: base64Input
