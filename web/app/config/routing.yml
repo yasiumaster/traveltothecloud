@@ -24,4 +24,8 @@ api_createInv:
 
 api_inv:
     path:  /inv
-    defaults: { _controller: "AppBundle:Main:inv" }
+    defaults: { _controller: "AppBundle:Main:inv" }     
+     
+cron_mail:
+    path:  /cron/mail
+    defaults: { _controller: "AppBundle:Cron:readMails" }

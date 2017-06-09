@@ -6,7 +6,7 @@ var config = {
 	messagingSenderId: "96949882488",
 };
 firebase.initializeApp(config);
-navigator.serviceWorker.register('assets/js/service-worker.js')
+/*navigator.serviceWorker.register('assets/js/service-worker.js')
 .then((registration) => {
 	const messaging = firebase.messaging();
 	messaging.useServiceWorker(registration);
@@ -40,4 +40,4 @@ navigator.serviceWorker.register('assets/js/service-worker.js')
 		var notification = new Notification(notificationTitle, notificationOptions);
 	});
 
-});
+});*/

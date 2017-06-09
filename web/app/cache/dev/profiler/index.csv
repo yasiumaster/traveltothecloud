@@ -513,6 +513,39 @@ e871c0,127.0.0.1,GET,http://127.0.0.1/traveltothecloud/web/web/inv?unq=d39da3480
 384815,127.0.0.1,GET,http://127.0.0.1/traveltothecloud/web/web/inv?unq=d39da348076b9df4d3dc5ad15d02aac3,1497046490,,200
 eb971d,127.0.0.1,GET,http://127.0.0.1/traveltothecloud/web/web/inv?unq=d39da348076b9df4d3dc5ad15d02aac3,1497046594,,200
 457a69,127.0.0.1,GET,http://127.0.0.1/traveltothecloud/web/web/inv?unq=d39da348076b9df4d3dc5ad15d02aac3,1497046739,,200
+<<<<<<< HEAD
+fe5aae,127.0.0.1,GET,http://127.0.0.1/traveltothecloud/web/web/cron/mail,1497048561,c45c30,200
+c45c30,127.0.0.1,GET,http://127.0.0.1/traveltothecloud/web/web/cron/mail,1497048561,,500
+2fce23,127.0.0.1,GET,http://127.0.0.1/traveltothecloud/web/web/cron/mail,1497048578,77a178,200
+77a178,127.0.0.1,GET,http://127.0.0.1/traveltothecloud/web/web/cron/mail,1497048578,,500
+4f7c45,127.0.0.1,GET,http://127.0.0.1/traveltothecloud/web/web/cron/mail,1497048593,93c747,200
+93c747,127.0.0.1,GET,http://127.0.0.1/traveltothecloud/web/web/cron/mail,1497048593,,500
+bcb25a,127.0.0.1,GET,http://127.0.0.1/traveltothecloud/web/web/cron/mail,1497048681,a28327,200
+a28327,127.0.0.1,GET,http://127.0.0.1/traveltothecloud/web/web/cron/mail,1497048681,,500
+5933a8,127.0.0.1,GET,http://127.0.0.1/traveltothecloud/web/web/cron/mail,1497048683,b269c5,200
+b269c5,127.0.0.1,GET,http://127.0.0.1/traveltothecloud/web/web/cron/mail,1497048683,,500
+696354,127.0.0.1,GET,http://127.0.0.1/traveltothecloud/web/web/cron/mail,1497048723,b3bd7e,200
+b3bd7e,127.0.0.1,GET,http://127.0.0.1/traveltothecloud/web/web/cron/mail,1497048723,,500
+702875,127.0.0.1,GET,http://127.0.0.1/traveltothecloud/web/web/cron/mail,1497048724,1a3c33,200
+1a3c33,127.0.0.1,GET,http://127.0.0.1/traveltothecloud/web/web/cron/mail,1497048724,,500
+96eb6b,127.0.0.1,GET,http://127.0.0.1/traveltothecloud/web/web/cron/mail,1497048729,596be5,200
+596be5,127.0.0.1,GET,http://127.0.0.1/traveltothecloud/web/web/cron/mail,1497048729,,500
+8c4c2b,127.0.0.1,GET,http://127.0.0.1/traveltothecloud/web/web/cron/mail,1497048730,1fb464,200
+1fb464,127.0.0.1,GET,http://127.0.0.1/traveltothecloud/web/web/cron/mail,1497048730,,500
+e0a9f3,127.0.0.1,GET,http://127.0.0.1/traveltothecloud/web/web/cron/mail,1497048804,dd8edc,200
+dd8edc,127.0.0.1,GET,http://127.0.0.1/traveltothecloud/web/web/cron/mail,1497048804,,500
+ca86e8,127.0.0.1,GET,http://127.0.0.1/traveltothecloud/web/web/cron/mail,1497048945,3d6dab,200
+3d6dab,127.0.0.1,GET,http://127.0.0.1/traveltothecloud/web/web/cron/mail,1497048945,,500
+fa697f,127.0.0.1,GET,http://127.0.0.1/traveltothecloud/web/web/inv?unq=d39da348076b9df4d3dc5ad15d02aac3,1497049073,,200
+529231,127.0.0.1,GET,http://127.0.0.1/traveltothecloud/web/web/cron/mail,1497049273,39f25b,200
+39f25b,127.0.0.1,GET,http://127.0.0.1/traveltothecloud/web/web/cron/mail,1497049273,,500
+8e5034,127.0.0.1,GET,http://127.0.0.1/traveltothecloud/web/web/cron/mail,1497049318,0ad91e,200
+0ad91e,127.0.0.1,GET,http://127.0.0.1/traveltothecloud/web/web/cron/mail,1497049318,,500
+8d539f,127.0.0.1,GET,http://127.0.0.1/traveltothecloud/web/web/cron/mail,1497049339,615db8,200
+615db8,127.0.0.1,GET,http://127.0.0.1/traveltothecloud/web/web/cron/mail,1497049339,,500
+169753,127.0.0.1,GET,http://127.0.0.1/traveltothecloud/web/web/cron/mail,1497049604,b44624,200
+b44624,127.0.0.1,GET,http://127.0.0.1/traveltothecloud/web/web/cron/mail,1497049604,,500
+=======
 >>>>>>> 4af5306bac9cc29b9d63592d66b1d8a72139f69c
 f6c54b,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/,1497048633,,200
 defb4e,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/,1497048674,,200
@@ -524,6 +557,7 @@ fee166,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/save_de
 738820,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/save_device_token?deviceToken=ejSkapAL32w%3AAPA91bG67QKFlmx8Qynaamvg30GJA6KYVco-TBr6NocTa86F6YbuKFPgVcul-CM964uicd2HrqbqRIpDE0L5e5i-ZYbC1huuVyVSo0d8PxiV8RzRFUQC4J0PJPeFTDm4EajKolWH3jK_,1497048748,,500
 12079c,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/,1497048784,,200
 64db8d,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/save_device_token?deviceToken=ejSkapAL32w%3AAPA91bG67QKFlmx8Qynaamvg30GJA6KYVco-TBr6NocTa86F6YbuKFPgVcul-CM964uicd2HrqbqRIpDE0L5e5i-ZYbC1huuVyVSo0d8PxiV8RzRFUQC4J0PJPeFTDm4EajKolWH3jK_,1497048786,,200
+<<<<<<< HEAD
 5aac00,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/,1497049226,e33bd6,200
 e33bd6,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/,1497049226,,500
 a9728a,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/_wdt/e33bd6,1497049227,e1441d,200
@@ -556,3 +590,9 @@ f38678,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/,149705
 809cc5,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/save_device_token?deviceToken=ejSkapAL32w%3AAPA91bG67QKFlmx8Qynaamvg30GJA6KYVco-TBr6NocTa86F6YbuKFPgVcul-CM964uicd2HrqbqRIpDE0L5e5i-ZYbC1huuVyVSo0d8PxiV8RzRFUQC4J0PJPeFTDm4EajKolWH3jK_,1497051171,,200
 d3341c,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/,1497051213,,200
 74bdf9,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/save_device_token?deviceToken=ejSkapAL32w%3AAPA91bG67QKFlmx8Qynaamvg30GJA6KYVco-TBr6NocTa86F6YbuKFPgVcul-CM964uicd2HrqbqRIpDE0L5e5i-ZYbC1huuVyVSo0d8PxiV8RzRFUQC4J0PJPeFTDm4EajKolWH3jK_,1497051215,,200
+=======
+>>>>>>> d22cf50fe5c8341a50ead61a637d93869b58d1f3
+a8d179,127.0.0.1,GET,http://127.0.0.1/traveltothecloud/web/web/inv?unq=d39da348076b9df4d3dc5ad15d02aac3,1497050668,cb11b4,200
+cb11b4,127.0.0.1,GET,http://127.0.0.1/traveltothecloud/web/web/inv?unq=d39da348076b9df4d3dc5ad15d02aac3,1497050668,,500
+bfb821,127.0.0.1,GET,http://127.0.0.1/traveltothecloud/web/web/inv?unq=d39da348076b9df4d3dc5ad15d02aac3,1497050729,,200
+>>>>>>> a079f461f6bf3b7f8fff193cab284178c391dac2
