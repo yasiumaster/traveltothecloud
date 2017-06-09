@@ -65,6 +65,14 @@ $(document).ready(function() {
       });
     }
 
+    window._getCordinates = function() {
+      return new Promise(function(resolve, reject) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+          resolve([position.coords.latitude,position.coords.longitude]);
+        });
+      });
+    }
+
   } else {
     alert('Geolocation API not supported.');
   }

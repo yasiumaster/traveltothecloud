@@ -8,10 +8,10 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use AppBundle\Classes\UserHelper;
 
 class MainController extends Controller{
-	
-	
+
+
 	public function before(){
-		
+
 		$user = $this->getUser();
 		$em = $this->get('doctrine')->getManager();
 		$us = UserHelper::isSetuped($user, $em);
@@ -33,24 +33,24 @@ class MainController extends Controller{
     	);
     	return new Response($html, 200, array('Content-Type' => 'text/html'));
 	}
-	
-	
+
+
 	public function invAction(){
 		if($resp = $this->before()){
 			return $resp;
 		}
-		
+
 		$user = $this->getUser();
 		$em = $this->get('doctrine')->getManager();
 		$req = $this->getRequest();
 
 		$ticket = $em->getRepository('AppBundle:Tickets')
 		->findByUnq($req->get('unq'));
-		
+
 		if(!$ticket){
 			return new JsonResponse(array('error'=>1,'desc'=>'ticket not vaild'));
 		}else{
-			
+
 			$ticket[0]->setUserid($this->getUser()->getUsername());
 			$em->flush();
 		}
