@@ -9,9 +9,12 @@
     </div>
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#pricing" class="scroll">Help</a></li>
+        <li>
+          <a href="#pricing" class="scroll">Help</a>
+        </li>
       </ul>
-    </div><!--/.navbar-collapse -->
+    </div>
+    <!--/.navbar-collapse -->
   </div>
 </div>
 
@@ -28,22 +31,45 @@
 
     <div class="row header-info">
       <div class="col-sm-10 col-sm-offset-1 text-center">
-        <h1 class="wow fadeIn">A free landing page theme</h1>
-        <br />
-        <p class="lead wow fadeIn" data-wow-delay="0.5s">Lorem ipsum dolor sit amet, consectetur adipis. <br>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit sit dol mi arlna.</p>
-        <br />
+        <h1 class="wow fadeIn">Plan a journey</h1>
+        <br/>
+      <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+          <table class="table table-hover" style="background: rgba(255,255,255,0.8);">
+            <thead>
+              <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Address</th>
+                <th>Date</th>
+                <th>Name</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>John</td>
+                <td>Doe</td>
+                <td>Kraków Balice</td>
+                <td>20-09-2017 15:30</td>
+                <td>Lotnisko Balice</td>
+              </tr>
+
+            </tbody>
+          </table>
+          <div id="map"></div>
+        </div>
+      </div>
+        <br/>
 
         <div class="row">
           <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
             <div class="row">
-              <div class="col-xs-6 text-right wow fadeInUp" data-wow-delay="1s">
-                <a id="record" class="btn btn-secondary btn-lg">Record</a>
+
+              <div class="col-xs-6 col-xs-offset-5 text-left wow fadeInUp" data-wow-delay="1.4s">
+                <a href="#be-the-first" class="btn btn-primary btn-lg scroll">Plan</a>
               </div>
-              <div class="col-xs-6 text-left wow fadeInUp" data-wow-delay="1.4s">
-                <a href="#invite" class="btn btn-primary btn-lg scroll">Request Invite</a>
-              </div>
-            </div><!--End Button Row-->
+            </div>
+            <!--End Button Row-->
           </div>
         </div>
 
@@ -51,3 +77,27 @@
     </div>
   </div>
 </header>
+<style>
+     #map {
+      height: 200px;
+      width: 100%;
+     }
+  </style>
+<script>
+      function initMap() {
+        var uluru = {lat: -25.363, lng: 131.044};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru,
+          styles: [{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#46bcec"},{"visibility":"on"}]}]
+
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClDqdd7ekv8CpUYj1xIhB7jzQopZo4uyY&callback=initMap">
+    </script>

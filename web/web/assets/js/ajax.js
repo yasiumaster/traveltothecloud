@@ -16,3 +16,19 @@ var convert = function(base64Input) {
 	}
 	);
 };
+
+
+
+var polly = function(text,fun){
+	$.ajax({
+		url : 'https://asyf0ysjqd.execute-api.us-east-1.amazonaws.com/tttc/polly',
+		type: "GET",
+		data: { speakText : text }
+	}).done(function(msg){
+		var sound = (msg.presignedUrl);
+		$('#gensound')[0].pause();
+		$('#gensound')[0].src = sound;
+		$('#gensound')[0].play();
+		fun();
+	});
+}

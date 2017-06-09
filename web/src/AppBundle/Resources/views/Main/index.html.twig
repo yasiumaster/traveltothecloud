@@ -8,5 +8,22 @@
 
 		{% include 'AppBundle:Main:partials/footer.html.twig' %}
 		{% include 'AppBundle:Main:partials/foot.html.twig' %}
+		
+		<audio controls id="gensound">
+			<source src="horse.ogg" type="audio/ogg">
+			<source src="horse.mp3" type="audio/mpeg">
+			Your browser does not support the audio element.
+		</audio>
+		<script>
+		
+			$( document ).ready(function() {
+				polly('Would you like assistance with your ',function(){
+					console.log('ok');
+				
+				});
+			});
+			
+		</script>
+		
   </body>
 </html>
