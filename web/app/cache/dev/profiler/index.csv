@@ -265,6 +265,16 @@ b659a0,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/,149703
 624b18,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/,1497034768,,200
 ba2244,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/,1497034822,,200
 eb84bb,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/,1497034843,,200
+<<<<<<< HEAD
+ab454a,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/,1497036312,,200
+aa48b7,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/,1497036382,,200
+a24aff,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/service-worker.js,1497036384,81562b,200
+81562b,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/service-worker.js,1497036384,,404
+348ebb,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/service-worker.js,1497036388,7b8232,200
+7b8232,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/service-worker.js,1497036388,,404
+aee229,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/,1497036403,,200
+0762ad,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/,1497038288,,200
+=======
 >>>>>>> c1ad9f7c4b9040db68d41d9d579d898fb95c698a
 ef41de,127.0.0.1,GET,http://127.0.0.1/traveltothecloud/web/web/inv?unq=d39da348076b9df4d3dc5ad15d02aac3,1497035018,,200
 c245f7,127.0.0.1,GET,http://127.0.0.1/traveltothecloud/web/web/horse.ogg,1497035019,ee3477,200
@@ -421,3 +431,4 @@ e5909a,127.0.0.1,GET,http://127.0.0.1/traveltothecloud/web/web/horse.mp3,1497038
 a73494,127.0.0.1,GET,http://127.0.0.1/traveltothecloud/web/web/inv?unq=d39da348076b9df4d3dc5ad15d02aac3,1497039432,,200
 29fa35,127.0.0.1,GET,http://127.0.0.1/traveltothecloud/web/web/horse.ogg,1497039433,559cdb,200
 559cdb,127.0.0.1,GET,http://127.0.0.1/traveltothecloud/web/web/horse.ogg,1497039433,,404
+>>>>>>> dfaee321454443a9107b376151ee044ae88f8662
