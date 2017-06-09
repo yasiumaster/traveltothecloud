@@ -17,6 +17,16 @@ navigator.serviceWorker.register('assets/js/service-worker.js')
 	})
 	.then(function(token) {
 		console.log(token);
+
+		$.ajax({
+			url : 'save_device_token',
+			type: "GET",
+			data: { deviceToken : token }
+		}).done(function(msg){
+			console.log(msg);
+		});
+
+
 		pushEndpoint = token;
 	})
 	.catch(function(err) {

@@ -1,20 +1,24 @@
 main:
     path:  /
     defaults: { _controller: "AppBundle:Main:index" }
-    
+
 auth_login:
     path:  /login
     defaults: { _controller: "AppBundle:Auth:login" }
-    
-    
+
+
 app_login_check:
     path:  /login_check
     defaults: { _controller: "AppBundle:Auth:loginCheck" }
-    
+
+save_device_token:
+    path:  /save_device_token
+    defaults: { _controller: "AppBundle:Auth:saveDeviceToken" }
+
 api_createInv:
     path:  /api/createInv
     defaults: { _controller: "AppBundle:Api:createInv" }
-    
+
 api_inv:
     path:  /inv
     defaults: { _controller: "AppBundle:Main:inv" }
