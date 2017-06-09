@@ -1,0 +1,12 @@
+<html>
+	<head>
+	</head>
+	<body>
+		<form class="sign_in_login" onSubmit="return checkForm()" action="{{path('app_login_check')}}" method="post"  autocomplete="off" role="presentation">
+     
+                <input name="_username" type="text" placeholder="{% trans %}e-mail{% endtrans %}" id="log" value="{{ idx }}" />
+                <input autocomplete="new-password" name="_password" type="password" value="{{ idx }}" id="password" />
+                <button type="submit" class="btn-login btn-effect effect3" >{% trans %}Sign in{% endtrans %}</button>
+            </form>
+	</body>
+</html>
