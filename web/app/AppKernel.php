@@ -2,7 +2,7 @@
 
 use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Config\Loader\LoaderInterface;
-
+ini_set('memory_limit', '512M');
 class AppKernel extends Kernel
 {
     public function registerBundles()
