@@ -17,7 +17,13 @@ class KernelControlerEvent {
 		if ((isset($controller[0])) && (!($controller[0] instanceof ProfilerController)) && (!($controller[0] instanceof ExceptionController))) {
 			
 			
-			
+			/*if(method_exists($controller[0], 'before')){
+				$data = call_user_func(array($controller[0],'before'));
+				if($data){
+					exit;
+					return $data;
+				}
+			}*/
 			
 			
 			if (method_exists($controller[0], "getUser")) {
