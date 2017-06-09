@@ -10,7 +10,7 @@
           <h2>Be the first</h2>
           <p class="lead">Lorem ipsum dolor sit amet, consectetur adipis.</p>
           <div class="text-center wow fadeInUp" data-wow-delay="1s">
-            <a id="record" class="btn btn-secondary btn-lg">Record</a>
+            <a id="record" class="btn btn-secondary btn-lg" data-status="1">Record</a>
           </div>
         </div>
 
@@ -27,15 +27,15 @@
                   </div>
                   <div class="col-sm-7">
                     <div class="controls">
-                      <select id="address-line2" name="disabilities" type="text" placeholder="address line 2" class="form-control">
-                        <option>
-                          option 1
+                      <select id="disabilities" name="disabilities" type="text" placeholder="address line 2" class="form-control">
+						<option value="0">
+                          Select
                         </option>
-                        <option>
-                          option 2
+                        <option value="1">
+                          I'm blind
                         </option>
-                        <option>
-                          option 3
+                        <option value="2">
+                          I'm mute
                         </option>
                       </select>
                     </div>
@@ -77,7 +77,7 @@
                     <label>O ile wczesniej chcesz być na lotnisku?</label>
                   </div>
                   <div class="col-sm-7">
-                    <input type="text" class="form-control" />
+                    <input type="text" class="form-control"  id="nottime"/>
                   </div>
                 </div>
               </form>

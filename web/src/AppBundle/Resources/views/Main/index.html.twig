@@ -8,5 +8,86 @@
 
 		{% include 'AppBundle:Main:partials/footer.html.twig' %}
 		{% include 'AppBundle:Main:partials/foot.html.twig' %}
+		
+		<audio controls id="gensound">
+			<source src="horse.ogg" type="audio/ogg">
+			<source src="horse.mp3" type="audio/mpeg">
+			Your browser does not support the audio element.
+		</audio>
+		<script>
+			
+			
+			var gcall = function(){};
+			var answers = [];
+			var gtime = 0;
+			function startRecTime(time,_answers,callback){
+				answers = _answers;
+				gtime = time;
+				gcall = callback;
+				jQuery('#record').click();				
+				setTimeout(
+					function(){
+						jQuery('#record').click();
+				}
+				,time);	
+				
+			}
+			
+			
+			
+			$( document ).ready(function() {
+				polly('Would you like assistance with your ',function(){
+					startRecTime(2000,['yes','no'],function(option){
+						if(option == 'yes'){
+							//polly('What kind of disability u have?',function(){
+								//startRecTime(2000,["i'm blind","I'm mute"],function(option){
+								//		if(option == "i'm blind"){										
+								//			jQuery('#disabilities').val(1);
+												polly('Would you like to order an assist on airport',function(){
+													startRecTime(2000,['yes','no'],function(option){
+														if(option == 'yes'){
+															jQuery('#radio-1').prop('checked', true);
+														}else{
+															jQuery('#radio-2').prop('checked', true);
+														}
+															polly('Would you like to order the transport?',function(){
+																startRecTime(2000,['yes','no'],function(option){
+																	if(option == 'yes'){
+																		jQuery('#radio-3').prop('checked', true);
+																		polly('How much earlier you want to be there',function(){
+																		startRecTime(2000,[],function(option){
+																			jQuery('#nottime').val(option);
+																			_getPreciseLocation().then(function(loc){
+																				polly('Your localization is '+loc+'. Would you like to order transport here ?',function(){
+																					startRecTime(2000,['yes','no'],function(option){
+																					});
+																				});
+																			});
+																			
+																			
+																			
+																		});
+																	});
+																	}else{
+																		jQuery('#radio-4').prop('checked', true);
+																	}
+																	
+																
+																});
+															});
+													});
+												});
+								//		}
+								//});
+							//});
+						}else{
+							polly('Alright. See you later',function(){});
+						}
+					});
+				});
+			});
+			
+		</script>
+		
   </body>
 </html>
