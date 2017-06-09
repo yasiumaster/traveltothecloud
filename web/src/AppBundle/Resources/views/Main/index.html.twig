@@ -10,10 +10,19 @@
 		{% include 'AppBundle:Main:partials/foot.html.twig' %}
 
 		<audio controls id="gensound">
-			<source src="horse.ogg" type="audio/ogg">
-			<source src="horse.mp3" type="audio/mpeg">
+			<source src="" type="audio/ogg">
+			<source src="" type="audio/mpeg">
 			Your browser does not support the audio element.
 		</audio>
+		
+		
+		<audio controls id="pingsound">
+			<source src="{{asset('assets/sounds/ping.mp3')}}" type="audio/ogg">
+			<source src="{{asset('assets/sounds/ping.mp3')}}" type="audio/mpeg">
+			Your browser does not support the audio element.
+		</audio>
+		
+		
 		<script>
 
 
@@ -21,6 +30,8 @@
 			var answers = [];
 			var gtime = 0;
 			function startRecTime(time,_answers,callback){
+				$('#pingsound')[0].pause();
+				$('#pingsound')[0].play();
 				answers = _answers;
 				gtime = time;
 				gcall = callback;
@@ -35,81 +46,7 @@
 
 
 
-			$( document ).ready(function() {
-				polly('Would you like assistance with your ',function(){
-					startRecTime(2000,['yes','no'],function(option){
-						if(option == 'yes'){
-							//polly('What kind of disability u have?',function(){
-								//startRecTime(2000,["i'm blind","I'm mute"],function(option){
-								//		if(option == "i'm blind"){
-								//			jQuery('#disabilities').val(1);
-												polly('Would you like to order an assist on airport',function(){
-													startRecTime(2000,['yes','no'],function(option){
-														if(option == 'yes'){
-															jQuery('#radio-1').prop('checked', true);
-														}else{
-															jQuery('#radio-2').prop('checked', true);
-														}
-															polly('Would you like to order the transport?',function(){
-																startRecTime(2000,['yes','no'],function(option){
-																	if(option == 'yes'){
-																		jQuery('#radio-3').prop('checked', true);
-																		polly('How much earlier you want to be there?',function(){
-																		startRecTime(2000,[],function(option){
-																			jQuery('#nottime').val(option);
-																			_getPreciseLocation().then(function(loc){
-                                        $('#transport-address').val(loc);
-																				polly('Your localization is '+loc+'. Would you like to order transport here ?',function(){
-																					startRecTime(2000,['yes','no'],function(option){
-                                            if(option == 'no'){
-                                              polly('Where would you like to order the transport then?',function(){
-                                                  startRecTime(2000,[],function(option){
-                                                  $('#transport-address').val(option);
-                                                  polly('Would you need help with get into vehicle or with your luggage?',function(){
-                                                      startRecTime(2000,['yes','no'],function(option){
-                                                        if(option == 'yes'){
-                                                          polly('Ok then, everything is ok?',function(){
-                                                            startRecTime(2000,['yes','no'],function(option){
-                                                            if(option == 'yes'){
-
-                                                            }else{
-                                                              polly('Lets start from begining?',function(){
-
-                                                              });
-                                                            }
-                                                          });
-                                                        }
-                                                      });
-                                                  });
-                                                });
-                                              });
-                                            }
-																					});
-																				});
-																			});
-
-
-
-																		});
-																	});
-																	}else{
-																		jQuery('#radio-4').prop('checked', true);
-																	}
-
-
-																});
-															});
-													});
-												});
-								//		}
-								//});
-							//});
-						}else{
-							polly('Alright. See you later',function(){});
-						}
-					});
-				});
-			});
+			
 
 		</script>
 
