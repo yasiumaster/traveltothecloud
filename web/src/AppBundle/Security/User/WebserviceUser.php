@@ -22,7 +22,7 @@ class WebserviceUser implements UserInterface, EquatableInterface {
 	}
 	
 	public function getLanguage(){
-		return 'pl';
+		return 'pl';	
 	}
 	
 	
