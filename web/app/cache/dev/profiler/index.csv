@@ -101,6 +101,7 @@ c2965e,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/,149702
 853c13,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/,1497020979,,200
 d097ae,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/,1497021011,,200
 933fbb,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/,1497021345,,200
+<<<<<<< HEAD
 >>>>>>> 1f3c21c8a2811e39854bfc4fcfeb022e84c4b5b8
 54d947,127.0.0.1,GET,http://127.0.0.1/traveltothecloud/web/web/api/createInv,1497021516,295215,200
 295215,127.0.0.1,GET,http://127.0.0.1/traveltothecloud/web/web/api/createInv,1497021516,,500
@@ -179,3 +180,12 @@ bfabc6,127.0.0.1,GET,http://127.0.0.1/traveltothecloud/web/web/inv?unq=d39da3480
 f57c01,127.0.0.1,GET,http://127.0.0.1/traveltothecloud/web/web/api/createInv?address=poland%2Colchowa%2041&date=2017-06-09%2017%3A21%3A25&ff=1&lat=50.027890&long=19.950595&name=cinemaCity&ticketno=1,1497024026,,200
 c1baed,127.0.0.1,GET,http://127.0.0.1/traveltothecloud/web/web/inv?unq=d39da348076b9df4d3dc5ad15d02aac3,1497024034,,200
 a64c23,127.0.0.1,GET,http://127.0.0.1/traveltothecloud/web/web/inv?unq=d39da348076b9df4d3dc5ad15d02aac3,1497024129,,200
+=======
+d74b45,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/,1497021798,,200
+a54e0e,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/,1497022301,,200
+ac9cf6,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/,1497022684,,200
+b6d8f0,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/,1497022775,,200
+0f72f0,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/,1497023113,,200
+29fdea,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/,1497023192,,200
+310e9e,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/,1497023288,,200
+>>>>>>> 364c6f148fa14041756967f131847ebb1f7e56a8
