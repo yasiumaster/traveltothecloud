@@ -1,6 +1,4 @@
 var convert = function(base64Input) {
-  console.log(base64Input);
-  return;
 	$.ajax('https://asyf0ysjqd.execute-api.us-east-1.amazonaws.com/tttc/calllex', {
 		type: "POST",
 		data: base64Input
@@ -11,7 +9,7 @@ var convert = function(base64Input) {
 		decoded = decoded.substring(0, decoded.length - 1);
 		// var snd = new Audio("data:audio/mpeg;base64," + decoded);
 		// snd.play();
-    console.log(decoded);
+		console.log(decoded);
 	},
 	function fail(data, status) {
 		console.log('Request failed.  Returned status of ' + status);
