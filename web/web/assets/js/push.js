@@ -16,8 +16,6 @@ navigator.serviceWorker.register('assets/js/service-worker.js')
 		return messaging.getToken();
 	})
 	.then(function(token) {
-		console.log(token);
-
 		$.ajax({
 			url : 'save_device_token',
 			type: "GET",

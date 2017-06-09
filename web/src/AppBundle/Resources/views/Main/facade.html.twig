@@ -3,8 +3,7 @@
    {% include 'AppBundle:Main:partials/head.html.twig' %}
   <body>
 
-		{% include 'AppBundle:Main:partials/header.html.twig' %}
-		{% include 'AppBundle:Main:partials/forms.html.twig' %}
+		{% include 'AppBundle:Main:partials/buildings.html.twig' %}
 
 		{% include 'AppBundle:Main:partials/footer.html.twig' %}
 		{% include 'AppBundle:Main:partials/foot.html.twig' %}
@@ -25,24 +24,24 @@
 
 		<script>
 
-
-			var gcall = function(){};
-			var answers = [];
-			var gtime = 0;
-			function startRecTime(time,_answers,callback){
-				$('#pingsound')[0].pause();
-				$('#pingsound')[0].play();
-				answers = _answers;
-				gtime = time;
-				gcall = callback;
-				jQuery('#record').click();
-				setTimeout(
-					function(){
-						jQuery('#record').click();
-				}
-				,time);
-
-			}
+      //
+			// var gcall = function(){};
+			// var answers = [];
+			// var gtime = 0;
+			// function startRecTime(time,_answers,callback){
+			// 	$('#pingsound')[0].pause();
+			// 	$('#pingsound')[0].play();
+			// 	answers = _answers;
+			// 	gtime = time;
+			// 	gcall = callback;
+			// 	jQuery('#record').click();
+			// 	setTimeout(
+			// 		function(){
+			// 			jQuery('#record').click();
+			// 	}
+			// 	,time);
+      //
+			// }
 
 
 

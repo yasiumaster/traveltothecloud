@@ -23,7 +23,7 @@ var convert = function(base64Input) {
 			console.log('not in answers');
 			startRecTime(gtime,answers,gcall);
 		}
-		
+
 	},
 	function fail(data, status) {
 		console.log('Request failed.  Returned status of ' + status);
@@ -47,14 +47,14 @@ var polly = function(text,fun){
 			console.log('ok');
 			fun();
 		}
-		
+
 	});
 }
 
 var globAnswes = [];
 
 var globAskes = ['Would you like to order an assist on airport',
-				
+
 				]
 
 
@@ -64,7 +64,7 @@ function finalizationForm(){
 		startRecTime(2000,['yes','no'],function(option){
 			if(option = "yes"){
 				polly('Yeach',function(){
-				
+
 				});
 			}
 		});
@@ -72,14 +72,14 @@ function finalizationForm(){
 }
 
 function checkAll(ida){
-	
-	if(typeof(ida)== "undefined"){ 
+
+	if(typeof(ida)== "undefined"){
 		polly('Ok then',function(){
 			checkAll(1);
 		});
 		return;
 	}
-	
+
 	if(ida == 1){
 		if(globAnswes[1]=='yes'){
 			polly('You have ordered an assist on airport',function(){
@@ -90,7 +90,7 @@ function checkAll(ida){
 		}
 		return;
 	}
-	
+
 	if(ida == 2){
 		if(globAnswes[2]=='yes'){
 			polly('You have ordered the transport at  to '+globAnswes[4],function(){
@@ -101,7 +101,7 @@ function checkAll(ida){
 		}
 		return;
 	}
-	
+
 	if(ida == 5){
 		if(globAnswes[5]=='yes'){
 			polly('Your dirver will help you get into the car and also with your luggage',function(){
@@ -112,8 +112,8 @@ function checkAll(ida){
 		}
 		return;
 	}
-	
-	
+
+
 }
 
 
@@ -126,7 +126,7 @@ $(document).ready(function() {
 							if( (option == "i'm blind") || (option == "blind") || (option == "i'm visually impaired")){
 								jQuery('#disabilities').val(1);
 									polly('Would you like to order an assist on airport',function(){
-										
+
 										startRecTime(2000,['yes','no'],function(option){
 											globAnswes[1] = option;
 											if(option == 'yes'){
@@ -142,7 +142,7 @@ $(document).ready(function() {
 															polly('How much earlier you want to be there?',function(){
 															startRecTime(2000,[],function(option){
 																globAnswes[3] = option;
-																jQuery('#nottime').val(option);
+																jQuery('#nottime').val(parseDate('2017-06-10 10:00',option));
 																_getPreciseLocation().then(function(loc){
 																	$('#transport-address').val(loc);
 																	polly('Your localization is '+loc+'. Would you like to order transport here ?',function(){
@@ -178,9 +178,9 @@ $(document).ready(function() {
 																							checkAll();
 																						})
 												                                	});
-																							
+
 												                                }
-												                                
+
 																			});
 																	});
 																});
@@ -210,4 +210,3 @@ $(document).ready(function() {
 
 
 });
-

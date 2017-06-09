@@ -7,17 +7,15 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use AppBundle\Classes\UserHelper;
 
-class MainController extends Controller{
+class BuildingFacadeController extends Controller{
 
 
 
 
 	public function indexAction(){
 
-
-
 		$html = $this->renderView(
-      		'AppBundle:Main:index.html.twig', []
+      		'AppBundle:Main:facade.html.twig', []
     	);
     	return new Response($html, 200, array('Content-Type' => 'text/html'));
 	}
