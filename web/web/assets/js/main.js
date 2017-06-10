@@ -77,4 +77,11 @@ $(document).ready(function() {
     alert('Geolocation API not supported.');
   }
 
+  $('#btn-order-confirm').on('click',function(e){
+    e.preventDefault();
+    var that = $(this);
+    that.closest('form').hide();
+    $('#info-box').fadeIn().css('color','black');
+  });
+
 });
