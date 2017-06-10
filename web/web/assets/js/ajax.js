@@ -61,9 +61,7 @@ var polly = function(text,fun){
 
 var globAnswes = [];
 
-var globAskes = ['Would you like to order an assist on airport',
-
-				]
+var globAskes = [];
 
 
 
@@ -130,8 +128,8 @@ $(document).ready(function() {
 		startRecTime(2000,['yes','no'],function(option){
 			if(option == 'yes'){
 				polly('What kind of disability u have?',function(){
-					startRecTime(2000,["blind","i'm visually impaired","i'm blind","I'm mute"],function(option){
-							if( (option == "i'm blind") || (option == "blind") || (option == "i'm visually impaired")){
+					startRecTime(2000,["yes","i'm visually impaired","i'm blind","I'm mute"],function(option){
+							if( (option == "i'm blind") || (option == "yes") || (option == "i'm visually impaired")){
 								jQuery('#disabilities').val(1);
 									polly('Would you like to order an assist on airport',function(){
 

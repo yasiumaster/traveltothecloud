@@ -6,7 +6,9 @@ var parseDate = function(eventDate, offset) {
 
 	var hours = times[0];
 	var minutes = times[2];
-
+	if(typeof(minutes) == "undefined"){
+		minutes = "zero";
+	}
 	console.log(hours);
 	console.log(minutes);
 

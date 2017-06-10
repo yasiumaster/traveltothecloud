@@ -22,10 +22,13 @@ class AuthController extends Controller{
 
 	public function saveDeviceTokenAction(){
 		$req = $this->getRequest();
-
+		$em =  $this->get('doctrine')->getManager();
 		$token = $req->get('deviceToken');
-
-		return new JsonResponse(ResponseHelper::ApiCreateInv('jestSuper'));
+		$user = $this->getUser();
+		$user = $em->getRepository('AppBundle:Users')->findByIdx($user->getUsername());
+		$user[0]->setDeviceToken($token);
+		$em->flush();
+		return new JsonResponse(array('error'=>0));
 
 	}
 

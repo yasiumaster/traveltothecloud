@@ -71,6 +71,15 @@ class Users
      * @ORM\Column(name="password", type="string", length=255)
      */
     private $password;
+    
+    
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="deviceToken", type="string", length=255)
+     */
+    private $deviceToken;
+    
 
     /**
      * Get id
@@ -242,6 +251,31 @@ class Users
     public function getPassword()
     {
     	return $this->password;
+    }
+    
+    
+    
+    /**
+     * Set deviceToken
+     *
+     * @param string $password
+     * @return Users
+     */
+    public function setDeviceToken($deviceToken)
+    {
+    	$this->deviceToken= $deviceToken;
+    	
+    	return $this;
+    }
+    
+    /**
+     * Get deviceToken
+     *
+     * @return string
+     */
+    public function getDeviceToken()
+    {
+    	return $this->deviceToken;
     }
     
 }

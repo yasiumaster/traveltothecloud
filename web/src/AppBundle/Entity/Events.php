@@ -24,23 +24,23 @@ class Events
     /**
      * @var int
      *
-     * @ORM\Column(name="idx", type="integer")
+     * @ORM\Column(name="userid", type="integer")
      */
-    private $idx;
+    private $userid;
 
     /**
-     * @var int
+     * @var string
      *
-     * @ORM\Column(name="event_type", type="integer")
+     * @ORM\Column(name="link", type="string", length=255)
      */
-    private $eventType;
+    private $link;
 
     /**
-     * @var int
+     * @var string
      *
-     * @ORM\Column(name="exec", type="integer")
+     * @ORM\Column(name="title", type="string", length=255)
      */
-    private $exec;
+    private $title;
 
     /**
      * @var \DateTime
@@ -48,6 +48,13 @@ class Events
      * @ORM\Column(name="date", type="datetimetz")
      */
     private $date;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="runed", type="integer")
+     */
+    private $runed;
 
 
     /**
@@ -61,72 +68,72 @@ class Events
     }
 
     /**
-     * Set idx
+     * Set userid
      *
-     * @param integer $idx
+     * @param integer $userid
      * @return Events
      */
-    public function setIdx($idx)
+    public function setUserid($userid)
     {
-        $this->idx = $idx;
+        $this->userid = $userid;
     
         return $this;
     }
 
     /**
-     * Get idx
+     * Get userid
      *
      * @return integer 
      */
-    public function getIdx()
+    public function getUserid()
     {
-        return $this->idx;
+        return $this->userid;
     }
 
     /**
-     * Set eventType
+     * Set link
      *
-     * @param integer $eventType
+     * @param string $link
      * @return Events
      */
-    public function setEventType($eventType)
+    public function setLink($link)
     {
-        $this->eventType = $eventType;
+        $this->link = $link;
     
         return $this;
     }
 
     /**
-     * Get eventType
+     * Get link
      *
-     * @return integer 
+     * @return string 
      */
-    public function getEventType()
+    public function getLink()
     {
-        return $this->eventType;
+        return $this->link;
     }
 
     /**
-     * Set exec
+     * Set title
      *
-     * @param integer $exec
+     * @param string $title
      * @return Events
      */
-    public function setExec($exec)
+    public function setTitle($title)
     {
-        $this->exec = $exec;
+        $this->title = $title;
     
         return $this;
     }
 
     /**
-     * Get exec
+     * Get title
      *
-     * @return integer 
+     * @return string 
      */
-    public function getExec()
+    public function getTitle()
     {
-        return $this->exec;
+        return $this->title;
     }
 
     /**
@@ -150,5 +157,28 @@ class Events
     public function getDate()
     {
         return $this->date;
+    }
+
+    /**
+     * Set runed
+     *
+     * @param integer $runed
+     * @return Events
+     */
+    public function setRuned($runed)
+    {
+        $this->runed = $runed;
+    
+        return $this;
+    }
+
+    /**
+     * Get runed
+     *
+     * @return integer 
+     */
+    public function getRuned()
+    {
+        return $this->runed;
     }
 }
