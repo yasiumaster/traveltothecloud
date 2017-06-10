@@ -42,7 +42,15 @@ var polly = function(text,fun){
 		var sound = (msg.presignedUrl);
 		$('#gensound')[0].pause();
 		$('#gensound')[0].src = sound;
-		$('#gensound')[0].play();
+		var playPromise = $('#gensound')[0].play();
+		if (playPromise !== undefined) {
+			  playPromise.then(function() {
+			    // Automatic playback started!
+			  }).catch(function(error) {
+			    // Automatic playback failed.
+			    // Show a UI element to let the user manually start playback.
+			  });
+		}
 		$('#gensound')[0].onended= function(){
 			console.log('ok');
 			fun();
