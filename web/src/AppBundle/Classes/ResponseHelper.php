@@ -11,7 +11,7 @@ class ResponseHelper {
 	
 	
 	public static function ApiCreateInv($unq){
-		return array('error'=>0,'link'=>'http://127.0.0.1/traveltothecloud/web/web/inv?unq='.$unq);
+		return array('error'=>0,'link'=>'http://127.0.0.1/app.php/inv?unq='.$unq);
 	}
 	
 }

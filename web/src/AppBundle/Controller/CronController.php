@@ -4,6 +4,7 @@ namespace AppBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use AppBundle\Entity\Events;
+use Symfony\Component\HttpFoundation\JsonResponse;
 
 class CronController extends Controller {
 	public function readMailsAction() {
@@ -13,19 +14,11 @@ class CronController extends Controller {
 		$users = $em->getRepository ( 'AppBundle:Users' )->findAll ();
 		
 		foreach ( $users as $user ) {
-			
-			/* connect to gmail */
 			$hostname = '{imap.gmail.com:993/imap/ssl}INBOX';
 			$username = $user->getEmail ();
 			$password = $user->getPassword ();
-			
-			/* try to connect */
 			$inbox = \imap_open ( $hostname, $username, $password ) or die ( 'Cannot connect to Gmail: ' . imap_last_error () );
-			
-			/* grab emails */
 			$emails = imap_search ( $inbox, 'ALL' );
-			
-			/* if emails are returned, cycle through each... */
 			if ($emails) {
 				
 				
@@ -39,15 +32,15 @@ class CronController extends Controller {
 					
 					
 					$message = strip_tags ( imap_fetchbody ( $inbox, $email_number, 2 ) );
-					
-					$output .= '<div class="body">' . $message . '</div>';
-					$re = '/http:\/\/127\.0\.0\.1\/app\.php\/\?unq=(([a-zA-Z0-9])*)/';
+					$message = str_replace("=\r\n",'',$message);
+					$message = str_replace("unq=3D",'unq=',$message);
+					$re = '/http:\/\/127\.0\.0\.1\/app\.php\/\inv\?unq=(([a-zA-Z0-9])*)/';
 					$str = $message;
 					preg_match_all ( $re, $str, $matches, PREG_SET_ORDER, 0 );
 					
 					if ((isset ( $matches [0] )) && ($matches [0] [1])) {
 						$unq = $matches [0] [1];
-						var_dump('kl');
+						var_dump($unq);
 						$li = $em->getRepository ( 'AppBundle:Events' )->findByLink($unq);
 						var_dump(count($li));
 						if(count($li) == 0){
@@ -61,7 +54,7 @@ class CronController extends Controller {
 									CURLOPT_TIMEOUT => 30,
 									CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
 									CURLOPT_CUSTOMREQUEST => "POST",
-									CURLOPT_POSTFIELDS => "{\n    \"notification\":{\n      \"title\": \"New event recived\",\n      \"body\": \"Message content body\",\n      \"icon\": \"https://d3vhsxl1pwzf0p.cloudfront.net/images/v2/faces/2.jpg\",\n      \"click_action\": \"http://127.0.0.1/traveltothecloud/web/web/inv?=".$unq."\"\n    },\n    \"to\" : \"".($user->getDeviceToken())."\"\n}",
+									CURLOPT_POSTFIELDS => "{\n    \"notification\":{\n      \"title\": \"New event recived\",\n      \"body\": \"Flight to London\",\n      \"icon\": \"https://dgk28ckagqims.cloudfront.net/template-files/5160/20170610_023045_94c0d8d7966fe7fabdc63c35433104a828d597ba.jpg\",\n      \"click_action\": \"http://127.0.0.1/traveltothecloud/web/web/inv?unq=".$unq."\"\n    },\n    \"to\" : \"".($user->getDeviceToken())."\"\n}",
 									CURLOPT_HTTPHEADER => array(
 											"authorization: key=AIzaSyBRIpoy5XfGdwvAtBIUlG_vqUxMmxzb0c0",
 											"cache-control: no-cache",
@@ -72,7 +65,7 @@ class CronController extends Controller {
 							
 							$response = curl_exec($curl);
 							$err = curl_error($curl);
-							
+							//var_dump(json_decode("{\n    \"notification\":{\n      \"title\": \"New event recived\",\n      \"body\": \"Message content body\",\n      \"icon\": \"https://d3vhsxl1pwzf0p.cloudfront.net/images/v2/faces/2.jpg\",\n      \"click_action\": \"http://127.0.0.1/traveltothecloud/web/web/inv?=".$unq."\"\n    },\n    \"to\" : \"".($user->getDeviceToken())."\"\n}",true));
 							curl_close($curl);
 							
 							
@@ -97,6 +90,7 @@ class CronController extends Controller {
 			imap_close ( $inbox );
 			
 		}
+		return new JsonResponse(array('error'=>0));
 	}
 }
 	

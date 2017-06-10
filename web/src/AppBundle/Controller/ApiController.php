@@ -23,6 +23,9 @@ class ApiController extends Controller{
 		$long	  = $req->get('long');
 		$ff		  = $req->get('ff');
 		
+		$firstname 	= $req->get('firstname');
+		$lastname	= $req->get('lastname');
+		
 		$date     = \DateTime::createFromFormat('Y-m-d H:i:s', $req->get('date'));
 		
 		if( 	($ticketno == null) ||
@@ -46,6 +49,8 @@ class ApiController extends Controller{
 		$ticket->setFriend($ff);
 		$ticket->setVdate($date);
 		$ticket->setUserid(-1);
+		$ticket->setLastname($lastname);
+		$ticket->setFirstname($firstname);	
 		$em->persist($ticket);
 		$em->flush();
 		return new JsonResponse(ResponseHelper::ApiCreateInv($unq));
