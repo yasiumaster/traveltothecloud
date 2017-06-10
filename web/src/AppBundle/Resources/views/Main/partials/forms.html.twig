@@ -1,14 +1,12 @@
 <div class="mouse-icon hidden-xs">
   <div class="scroll"></div>
 </div>
-{# {{ dump(dataInv) }} #}
 <section id="be-the-first" class="pad-xl">
   <div class="container">
     <div class="row">
       <div class="col-sm-12 margin-30 wow fadeIn" data-wow-delay="0.6s">
         <div class="text-center">
-          <h2>Be the first</h2>
-          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipis.</p>
+          <h2></h2>
           <div class="text-center wow fadeInUp" data-wow-delay="1s">
             <a id="record" class="btn btn-secondary btn-lg" data-status="1">Record</a>
           </div>
@@ -20,6 +18,7 @@
               <div class="panel-title">Sign Up</div>
             </div>
             <div class="panel-body">
+              <h1 id="info-box" style="display:none;">Thank you for choosing our service!</h1>
               <form method="post" action=".">
                 <div class="control-group">
                   <div class="col-sm-5">
@@ -107,10 +106,9 @@
                 </div>
                 <div class="control-group">
                   <div class="col-sm-12">
-                    <button class="btn btn-primary">Confirm order!</button>
+                    <button type="submit" id="btn-order-confirm" class="btn btn-primary">Confirm order!</button>
                   </div>
                 </div>
-
               </form>
             </div>
           </div>
