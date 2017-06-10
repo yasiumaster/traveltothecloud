@@ -7,17 +7,17 @@ var config = {
 	messagingSenderId: "96949882488",
 };
 firebase.initializeApp(config);
-
+self.tttc = {};
 
 const messaging = firebase.messaging();
 
-messaging.setBackgroundMessageHandler(function(payload) {
-	console.log('Received background message ', payload);
-	const notificationTitle = 'Background Message Title';
-	const notificationOptions = {
-		body: 'Background Message body.'
-	};
 
-	return self.registration.showNotification(notificationTitle,
-		notificationOptions);
+self.addEventListener('notificationclick', function (e) {
+    e.notification.close();
+    var promise = new Promise(function (resolve) {
+        setTimeout(resolve, 1000);
+    }).then(function () {
+        return clients.openWindow(self._edrone.data.locator);
+    });
+    e.waitUntil(promise);
 });
