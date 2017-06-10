@@ -43,11 +43,13 @@ record.onclick = function() {
     record.style.background = "red";
     record.style.color = "black";
     record.setAttribute("data-status","2");
+    record.innerText = "Recording..."
     return;
   } else{
     stopRecording();
     record.style.background = "";
     record.style.color = "";
+    record.innerText = "Record";
     record.setAttribute("data-status","1");
     return;
   }

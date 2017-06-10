@@ -121,6 +121,9 @@ $(document).ready(function() {
 	polly('Would you like assistance with your ',function(){
 		startRecTime(2000,['yes','no'],function(option){
 			if(option == 'yes'){
+				$('html, body').animate({
+        scrollTop: $("#be-the-first").offset().top
+    	}, 2000);
 				polly('What kind of disability u have?',function(){
 					startRecTime(2000,["blind","i'm visually impaired","i'm blind","I'm mute"],function(option){
 							if( (option == "i'm blind") || (option == "blind") || (option == "i'm visually impaired")){
