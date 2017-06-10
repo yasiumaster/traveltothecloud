@@ -1,6 +1,9 @@
 main:
     path:  /
     defaults: { _controller: "AppBundle:Main:index" }
+facade:
+    path:  /building_recognition
+    defaults: { _controller: "AppBundle:BuildingFacade:index" }
 
 auth_login:
     path:  /login

@@ -557,7 +557,42 @@ fee166,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/save_de
 738820,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/save_device_token?deviceToken=ejSkapAL32w%3AAPA91bG67QKFlmx8Qynaamvg30GJA6KYVco-TBr6NocTa86F6YbuKFPgVcul-CM964uicd2HrqbqRIpDE0L5e5i-ZYbC1huuVyVSo0d8PxiV8RzRFUQC4J0PJPeFTDm4EajKolWH3jK_,1497048748,,500
 12079c,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/,1497048784,,200
 64db8d,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/save_device_token?deviceToken=ejSkapAL32w%3AAPA91bG67QKFlmx8Qynaamvg30GJA6KYVco-TBr6NocTa86F6YbuKFPgVcul-CM964uicd2HrqbqRIpDE0L5e5i-ZYbC1huuVyVSo0d8PxiV8RzRFUQC4J0PJPeFTDm4EajKolWH3jK_,1497048786,,200
+<<<<<<< HEAD
+5aac00,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/,1497049226,e33bd6,200
+e33bd6,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/,1497049226,,500
+a9728a,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/_wdt/e33bd6,1497049227,e1441d,200
+e1441d,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/_wdt/e33bd6,1497049227,,500
+e8a6cc,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/_profiler/e33bd6,1497049236,1799ed,200
+1799ed,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/_profiler/e33bd6,1497049236,,500
+1973ba,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/_wdt/1799ed,1497049237,0399f9,200
+0399f9,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/_wdt/1799ed,1497049237,,500
+90b173,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/,1497049262,,200
+8130a8,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/save_device_token?deviceToken=ejSkapAL32w%3AAPA91bG67QKFlmx8Qynaamvg30GJA6KYVco-TBr6NocTa86F6YbuKFPgVcul-CM964uicd2HrqbqRIpDE0L5e5i-ZYbC1huuVyVSo0d8PxiV8RzRFUQC4J0PJPeFTDm4EajKolWH3jK_,1497049263,,200
+8d1279,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/buillding_recognision,1497049275,1ae2a3,200
+1ae2a3,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/buillding_recognision,1497049275,,404
+1d0304,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/building_recognition,1497049287,,200
+9c9667,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/save_device_token?deviceToken=ejSkapAL32w%3AAPA91bG67QKFlmx8Qynaamvg30GJA6KYVco-TBr6NocTa86F6YbuKFPgVcul-CM964uicd2HrqbqRIpDE0L5e5i-ZYbC1huuVyVSo0d8PxiV8RzRFUQC4J0PJPeFTDm4EajKolWH3jK_,1497049288,,200
+196c48,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/building_recognition,1497049380,,200
+49fca8,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/save_device_token?deviceToken=ejSkapAL32w%3AAPA91bG67QKFlmx8Qynaamvg30GJA6KYVco-TBr6NocTa86F6YbuKFPgVcul-CM964uicd2HrqbqRIpDE0L5e5i-ZYbC1huuVyVSo0d8PxiV8RzRFUQC4J0PJPeFTDm4EajKolWH3jK_,1497049381,,200
+a479d9,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/building_recognition,1497049430,,200
+f2e97d,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/save_device_token?deviceToken=ejSkapAL32w%3AAPA91bG67QKFlmx8Qynaamvg30GJA6KYVco-TBr6NocTa86F6YbuKFPgVcul-CM964uicd2HrqbqRIpDE0L5e5i-ZYbC1huuVyVSo0d8PxiV8RzRFUQC4J0PJPeFTDm4EajKolWH3jK_,1497049431,,200
+dcc195,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/,1497050568,,200
+185380,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/save_device_token?deviceToken=ejSkapAL32w%3AAPA91bG67QKFlmx8Qynaamvg30GJA6KYVco-TBr6NocTa86F6YbuKFPgVcul-CM964uicd2HrqbqRIpDE0L5e5i-ZYbC1huuVyVSo0d8PxiV8RzRFUQC4J0PJPeFTDm4EajKolWH3jK_,1497050570,,200
+64dcce,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/,1497050588,,200
+bb43e7,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/save_device_token?deviceToken=ejSkapAL32w%3AAPA91bG67QKFlmx8Qynaamvg30GJA6KYVco-TBr6NocTa86F6YbuKFPgVcul-CM964uicd2HrqbqRIpDE0L5e5i-ZYbC1huuVyVSo0d8PxiV8RzRFUQC4J0PJPeFTDm4EajKolWH3jK_,1497050589,,200
+5e311c,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/,1497050884,,200
+b43f62,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/save_device_token?deviceToken=ejSkapAL32w%3AAPA91bG67QKFlmx8Qynaamvg30GJA6KYVco-TBr6NocTa86F6YbuKFPgVcul-CM964uicd2HrqbqRIpDE0L5e5i-ZYbC1huuVyVSo0d8PxiV8RzRFUQC4J0PJPeFTDm4EajKolWH3jK_,1497050886,,200
+bc4ceb,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/,1497050921,,200
+38c1e4,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/save_device_token?deviceToken=ejSkapAL32w%3AAPA91bG67QKFlmx8Qynaamvg30GJA6KYVco-TBr6NocTa86F6YbuKFPgVcul-CM964uicd2HrqbqRIpDE0L5e5i-ZYbC1huuVyVSo0d8PxiV8RzRFUQC4J0PJPeFTDm4EajKolWH3jK_,1497050923,,200
+dc1ede,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/,1497051146,,200
+d6c8e8,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/save_device_token?deviceToken=ejSkapAL32w%3AAPA91bG67QKFlmx8Qynaamvg30GJA6KYVco-TBr6NocTa86F6YbuKFPgVcul-CM964uicd2HrqbqRIpDE0L5e5i-ZYbC1huuVyVSo0d8PxiV8RzRFUQC4J0PJPeFTDm4EajKolWH3jK_,1497051148,,200
+f38678,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/,1497051169,,200
+809cc5,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/save_device_token?deviceToken=ejSkapAL32w%3AAPA91bG67QKFlmx8Qynaamvg30GJA6KYVco-TBr6NocTa86F6YbuKFPgVcul-CM964uicd2HrqbqRIpDE0L5e5i-ZYbC1huuVyVSo0d8PxiV8RzRFUQC4J0PJPeFTDm4EajKolWH3jK_,1497051171,,200
+d3341c,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/,1497051213,,200
+74bdf9,::1,GET,http://localhost/~maciejmendrela/traveltothecloud/web/web/save_device_token?deviceToken=ejSkapAL32w%3AAPA91bG67QKFlmx8Qynaamvg30GJA6KYVco-TBr6NocTa86F6YbuKFPgVcul-CM964uicd2HrqbqRIpDE0L5e5i-ZYbC1huuVyVSo0d8PxiV8RzRFUQC4J0PJPeFTDm4EajKolWH3jK_,1497051215,,200
+=======
 >>>>>>> d22cf50fe5c8341a50ead61a637d93869b58d1f3
 a8d179,127.0.0.1,GET,http://127.0.0.1/traveltothecloud/web/web/inv?unq=d39da348076b9df4d3dc5ad15d02aac3,1497050668,cb11b4,200
 cb11b4,127.0.0.1,GET,http://127.0.0.1/traveltothecloud/web/web/inv?unq=d39da348076b9df4d3dc5ad15d02aac3,1497050668,,500
 bfb821,127.0.0.1,GET,http://127.0.0.1/traveltothecloud/web/web/inv?unq=d39da348076b9df4d3dc5ad15d02aac3,1497050729,,200
+>>>>>>> a079f461f6bf3b7f8fff193cab284178c391dac2

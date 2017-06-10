@@ -16,8 +16,6 @@ firebase.initializeApp(config);
 		return messaging.getToken();
 	})
 	.then(function(token) {
-		console.log(token);
-
 		$.ajax({
 			url : 'save_device_token',
 			type: "GET",
