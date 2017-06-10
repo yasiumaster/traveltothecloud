@@ -69,8 +69,9 @@ function finalizationForm(){
 	polly('Please confirm if everything is ok',function(){
 		startRecTime(2000,['yes','no'],function(option){
 			if(option = "yes"){
-				polly('Yeach',function(){
-
+				jQuery('#btn-order-confirm').click();
+				polly('Thank you',function(){
+						
 				});
 			}
 		});
@@ -80,7 +81,7 @@ function finalizationForm(){
 function checkAll(ida){
 
 	if(typeof(ida)== "undefined"){
-		polly('Ok then',function(){
+		polly('Ok.',function(){
 			checkAll(1);
 		});
 		return;
@@ -99,7 +100,7 @@ function checkAll(ida){
 
 	if(ida == 2){
 		if(globAnswes[2]=='yes'){
-			polly('You have ordered the transport at  to '+globAnswes[4],function(){
+			polly('You have ordered the transport at from '+globAnswes[4]+' to '+_dest+' on '+jQuery('#nottime').val(),function(){
 				checkAll(5);
 			});
 		}else{
@@ -131,7 +132,8 @@ $(document).ready(function() {
         scrollTop: $("#be-the-first").offset().top
     	}, 2000);
 				polly('What kind of disability u have?',function(){
-					startRecTime(2000,["yes","i'm visually impaired","i'm blind","I'm mute"],function(option){
+					startRecTime(2000,[],function(option){
+							option = "i'm blind";
 							if( (option == "i'm blind") || (option == "yes") || (option == "i'm visually impaired")){
 								jQuery('#disabilities').val(1);
 									polly('Would you like to order an assist on airport',function(){

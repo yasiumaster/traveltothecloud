@@ -32,7 +32,7 @@ var parseDate = function(eventDate, offset) {
 	if(minutes != null) {
 		minutes = COUNTS[minutes];
 	}
-	var momentTime = moment(eventDate).add(hours, 'hours').add(minutes, 'minutes');
+	var momentTime = moment(eventDate).subtract(hours+1, 'hours').subtract(minutes, 'minutes');
 	console.log(momentTime);
 	return momentTime.format('LLL');
 };
