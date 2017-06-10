@@ -1,14 +1,28 @@
 var parseDate = function(eventDate, offset) {
-	//eventDate: 2017-06-10 10:00
+	//eventDate: 2017-06-10 10:00:00
 	//offset 2 hours 30 minutes
 
 	var times = offset.split(" ");
 
-	var hours = times[0];
-	var minutes = times[2];
+	if(times.length==4) {
+		var hours = times[0];
+		var minutes = times[2];
+	}
+	else if(offset.indexOf('hour') > -1) {
+		var hours = times[0];
+	}
+	else if(offset.indexOf('minute') > -1) {
+		var minutes = times[0];
 
-	console.log(hours);
-	console.log(minutes);
+	}
+
+	if(typeof(hours)  === undefined) {
+		hours = 'zero';
+	}
+
+	if(typeof(minutes)  === undefined) {
+		minutes = 'zero';
+	}
 
 	if(hours != null) {
 		hours = COUNTS[hours];
@@ -17,12 +31,9 @@ var parseDate = function(eventDate, offset) {
 	if(minutes != null) {
 		minutes = COUNTS[minutes];
 	}
-
-	var momentTime = moment(offset,"YYYY-MM-DD HH:mm");
+	var momentTime = moment(eventDate).add(hours, 'hours').add(minutes, 'minutes');
 	console.log(momentTime);
-	momentTime.add(hours, 'hours');
-	momentTime.add(minutes, 'minutes');
-	return momentTime.format();
+	return momentTime.format('LLL');
 };
 
 var COUNTS = {
